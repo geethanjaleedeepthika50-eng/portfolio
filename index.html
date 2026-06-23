@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geethanjalee Deepthika | IT Student & Software Engineer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                        },
+                        secondary: {
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            700: '#0e7490',
+                        },
+                        dark: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth transition class */
+        .transition-all-custom {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Custom scrollbar matching active theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
+        /* Gradient animations */
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        .animated-glow {
+            animation: pulseGlow 8s infinite alternate;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-dark-950 dark:text-slate-100 font-sans transition-colors duration-300 antialiased selection:bg-emerald-500 selection:text-dark-950">
+
+    <!-- Decorative Animated Background Gradients -->
+    <div class="fixed -top-40 -left-40 w-96 h-96 bg-primary-700/10 dark:bg-primary-700/20 rounded-full blur-[120px] pointer-events-none z-0 animated-glow"></div>
+    <div class="fixed top-1/2 right-10 w-80 h-80 bg-secondary-600/10 dark:bg-secondary-600/15 rounded-full blur-[100px] pointer-events-none z-0 animated-glow" style="animation-delay: 2s;"></div>
+    <div class="fixed -bottom-40 left-1/3 w-96 h-96 bg-emerald-800/5 dark:bg-emerald-800/10 rounded-full blur-[130px] pointer-events-none z-0 animated-glow" style="animation-delay: 4s;"></div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="relative z-10 flex flex-col min-h-screen">
+
+        <!-- Navigation Bar -->
+        <header class="sticky top-0 w-full bg-white/80 dark:bg-dark-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/60 z-50 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    
+                    <!-- Unique Custom SVG Logo -->
+                    <a href="#hero" class="flex items-center space-x-3 group">
+                        <div class="relative w-12 h-12 flex items-center justify-center bg-gradient-to-tr from-emerald-500 to-cyan-500 rounded-xl p-0.5 shadow-lg shadow-emerald-500/10 group-hover:shadow-emerald-500/30 transition-all-custom duration-300">
+                            <!-- Inner Logo Container -->
+                            <div class="w-full h-full bg-white dark:bg-dark-950 rounded-[10px] flex items-center justify-center transition-colors group-hover:bg-opacity-90">
+                                <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Backbone structure of G and D -->
+                                    <path d="M45 25C30 25 25 35 25 50C25 65 30 75 45 75C55 75 60 70 60 60H45" stroke="url(#logoGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M55 25H65C78 25 80 38 80 50C80 62 78 75 65 75H55V25Z" stroke="url(#logoGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                        <linearGradient id="logoGrad" x1="20" y1="20" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#10b981" />
+                                            <stop offset="1" stop-color="#06b6d4" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-display font-bold text-xl tracking-wider bg-gradient-to-r from-emerald-600 to-cyan-600 dark:from-emerald-400 dark:to-cyan-400 bg-clip-text text-transparent">GEETHANJALEE</span>
+                            <span class="text-[10px] uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400 font-semibold group-hover:text-emerald-500 transition-colors">DEEPTHIKA</span>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Navigation Links -->
+                    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                        <a href="#about" class="text-slate-600 hover:text-emerald-600 dark:text-slate-300 dark:hover:text-emerald-400 transition-all-custom py-2 border-b-2 border-transparent hover:border-emerald-500">About</a>
+                        <a href="#skills" class="text-slate-600 hover:text-emerald-600 dark:text-slate-300 dark:hover:text-emerald-400 transition-all-custom py-2 border-b-2 border-transparent hover:border-emerald-500">Skills</a>
+                        <a href="#projects" class="text-slate-600 hover:text-emerald-600 dark:text-slate-300 dark:hover:text-emerald-400 transition-all-custom py-2 border-b-2 border-transparent hover:border-emerald-500">Projects</a>
+                        <a href="#education" class="text-slate-600 hover:text-emerald-600 dark:text-slate-300 dark:hover:text-emerald-400 transition-all-custom py-2 border-b-2 border-transparent hover:border-emerald-500">Education</a>
+                    </nav>
+
+                    <!-- CTAs & Interactive Controls -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <!-- Theme Toggle Button -->
+                        <button onclick="toggleTheme()" class="p-2.5 rounded-xl bg-slate-200/60 text-slate-600 hover:text-emerald-600 border border-slate-300/50 dark:bg-slate-800/40 dark:text-slate-400 dark:hover:text-emerald-400 dark:border-slate-700/50 hover:bg-slate-200 dark:hover:bg-slate-800/80 transition-all-custom" aria-label="Toggle Theme">
+                            <i id="themeIcon" class="fa-solid fa-sun text-lg text-amber-500"></i>
+                        </button>
+                        <a href="#contact" class="px-5 py-2.5 rounded-xl text-sm font-semibold tracking-wide bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 hover:opacity-90 shadow-md shadow-emerald-500/10 transition-all-custom hover:-translate-y-0.5">
+                            Hire Me
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="flex items-center md:hidden space-x-3">
+                        <button onclick="toggleTheme()" class="p-2 rounded-lg bg-slate-200/60 text-slate-600 hover:text-emerald-600 border border-slate-300/50 dark:bg-slate-800/40 dark:text-slate-400 dark:hover:text-emerald-400 dark:border-slate-700/50 transition-all-custom" aria-label="Toggle Theme Mobile">
+                            <i id="themeIconMobile" class="fa-solid fa-sun text-amber-500"></i>
+                        </button>
+                        <button onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-200/60 text-slate-600 hover:text-emerald-600 border border-slate-300/50 dark:bg-slate-800/40 dark:text-slate-400 dark:hover:text-emerald-400 dark:border-slate-700/50 focus:outline-none transition-all-custom" aria-label="Toggle Menu">
+                            <i id="menuBtnIcon" class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Overlay -->
+            <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-dark-950 border-b border-slate-200 dark:border-slate-800/60 transition-all duration-300">
+                <div class="px-4 pt-2 pb-6 space-y-3 font-medium text-center">
+                    <a href="#about" onclick="toggleMobileMenu()" class="block py-2.5 px-4 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/40 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all-custom">About</a>
+                    <a href="#skills" onclick="toggleMobileMenu()" class="block py-2.5 px-4 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/40 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all-custom">Skills</a>
+                    <a href="#projects" onclick="toggleMobileMenu()" class="block py-2.5 px-4 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/40 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all-custom">Projects</a>
+                    <a href="#education" onclick="toggleMobileMenu()" class="block py-2.5 px-4 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/40 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all-custom">Education</a>
+                    <a href="#contact" onclick="toggleMobileMenu()" class="block py-3 px-4 rounded-xl text-slate-950 bg-gradient-to-r from-emerald-500 to-cyan-500 font-bold shadow-md shadow-emerald-500/10">Contact Me</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-[calc(100vh-80px)] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden py-12">
+            <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content Area -->
+                <div class="lg:col-span-7 flex flex-col space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center self-center lg:self-start space-x-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-sm font-semibold tracking-wide">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                        <span>Available for Internships & Projects</span>
+                    </div>
+
+                    <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight text-slate-900 dark:text-slate-100">
+                        Hi, I'm <span class="bg-gradient-to-r from-emerald-500 via-emerald-600 to-cyan-500 dark:from-emerald-400 dark:via-emerald-500 dark:to-cyan-400 bg-clip-text text-transparent font-extrabold">Geethanjalee</span> <span class="block mt-2">IT Student & Developer</span>
+                    </h1>
+
+                    <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Currently pursuing a <strong class="text-slate-800 dark:text-slate-200">HND in IT</strong> at SLIATE - Dehiwala. Focused on robust Java & Python development, database configurations, and dynamic web user interfaces.
+                    </p>
+
+                    <!-- Interactive CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold tracking-wide bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 hover:opacity-90 transition-all-custom shadow-lg shadow-emerald-500/20 hover:-translate-y-0.5 text-center">
+                            Explore Projects <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1kaNjmJVBIZUv6QM3_zm5mLT2gg1lSYLd/view?usp=drive_link" download="Geethanjalee_Deepthika_CV.pdf" class="w-full sm:w-auto px-6 py-4 rounded-2xl font-bold tracking-wide bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 dark:hover:text-slate-950 transition-all-custom hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            Download CV <i class="fa-solid fa-download"></i>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold tracking-wide bg-slate-200 dark:bg-slate-800/60 border border-slate-300 dark:border-slate-700/50 text-slate-800 dark:text-slate-100 hover:bg-slate-300 dark:hover:bg-slate-800/90 dark:hover:text-emerald-400 transition-all-custom text-center">
+                            Get In Touch
+                        </a>
+                    </div>
+
+                    <!-- Social Channels -->
+                    <div class="flex items-center justify-center lg:justify-start gap-6 pt-6 text-2xl text-slate-500 dark:text-slate-400">
+                        <a href="https://www.linkedin.com/in/geethanjalee-deepthika-b581082a9" target="_blank" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-all-custom hover:scale-110" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/geethanjaleedeepthika50-eng" target="_blank" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-all-custom hover:scale-110" aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:geethanjaleedeepthika50@gmail.com" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-all-custom hover:scale-110" aria-label="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Graphic Profile Card with Professional Headshot Image -->
+                <div class="lg:col-span-5 flex justify-center items-center">
+                    <div class="relative w-72 h-80 sm:w-80 sm:h-96 md:w-[350px] md:h-[425px] group">
+                        <!-- Decorative animated background glows -->
+                        <div class="absolute -inset-2 bg-gradient-to-tr from-emerald-500 to-cyan-500 rounded-[2rem] blur-xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                        
+                        <!-- Outer Frame Container -->
+                        <div class="absolute inset-0 bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800 rounded-[2rem] p-3 shadow-2xl flex flex-col transition-all-custom duration-500 group-hover:-translate-y-2">
+                            <!-- High-Quality Image Container -->
+                            <div class="relative w-full h-[82%] rounded-[1.5rem] overflow-hidden bg-slate-100 dark:bg-dark-950">
+                                <img src="c:\Users\HP\Desktop\Gemini_Generated_Image_6xv3l46xv3l46xv3.png" 
+                                     alt="Geethanjalee Deepthika" 
+                                     class="w-full h-full object-cover object-center transition duration-700 group-hover:scale-105"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/400x500/10b981/020617?text=Geethanjalee+Deepthika';">
+                                <!-- Floating Code Snippet Overlay inside profile headshot -->
+                                <div class="absolute bottom-3 left-3 bg-dark-950/85 backdrop-blur-md border border-slate-850/60 text-emerald-400 text-xs px-3 py-1.5 rounded-xl font-mono shadow-md">
+                                    <span class="text-cyan-400">const</span> dev = <span class="text-emerald-300">"Geethanjalee"</span>;
+                                </div>
+                            </div>
+                            <!-- Frame metadata bottom layout -->
+                            <div class="flex-1 flex items-center justify-between px-2 pt-2.5">
+                                <div class="text-left">
+                                    <span class="text-[9px] uppercase tracking-widest text-slate-400 dark:text-slate-500 font-bold block">Developer Portfolio</span>
+                                    <span class="font-display font-semibold text-slate-800 dark:text-slate-200 text-sm">SLIATE Dehiwala</span>
+                                </div>
+                                <div class="flex items-center space-x-1.5 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                    <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider">Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About & Core Competencies Section -->
+        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/60">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Left column header block -->
+                    <div class="lg:col-span-5 flex flex-col space-y-4">
+                        <span class="text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-widest text-sm">Professional Summary</span>
+                        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-slate-100 leading-tight">About Me</h2>
+                        <div class="h-1.5 w-24 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full mt-2"></div>
+                        <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed pt-4 font-light">
+                            I am a detail-oriented, technically grounded Information Technology student currently mastering my software and database competencies. My education combined with practical, hands-on projects equips me with a strong analytical toolkit for system modeling, design implementation, and collaborative workflows.
+                        </p>
+                    </div>
+
+                    <!-- Right Column details block -->
+                    <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Core Competency Card 1 -->
+                        <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-6 rounded-2xl hover:border-emerald-500/40 dark:hover:border-emerald-500/40 hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-all-custom group shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all-custom">
+                                <i class="fa-solid fa-code text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-slate-200 mb-2">Software Development</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Designing structured, reliable, and object-oriented backend application structures using standard Java and Python workflows.</p>
+                        </div>
+
+                        <!-- Core Competency Card 2 -->
+                        <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-6 rounded-2xl hover:border-emerald-500/40 dark:hover:border-emerald-500/40 hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-all-custom group shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all-custom">
+                                <i class="fa-solid fa-database text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-slate-200 mb-2">Database Administration</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Designing clean database models, writing structured query routines, and implementing data integrity rules in MySQL.</p>
+                        </div>
+
+                        <!-- Core Competency Card 3 -->
+                        <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-6 rounded-2xl hover:border-emerald-500/40 dark:hover:border-emerald-500/40 hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-all-custom group shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all-custom">
+                                <i class="fa-solid fa-laptop-code text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-slate-200 mb-2">Web Design</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Building polished responsive web setups highlighting standard accessibility, clean layouts, and simple UI flows.</p>
+                        </div>
+
+                        <!-- Core Competency Card 4 -->
+                        <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-6 rounded-2xl hover:border-emerald-500/40 dark:hover:border-emerald-500/40 hover:bg-slate-50 dark:hover:bg-slate-900/60 transition-all-custom group shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all-custom">
+                                <i class="fa-solid fa-people-group text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-slate-200 mb-2">Team Collaboration</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Communicating effectively, planning milestones, using version control (Git), and aligning code cleanly.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Grid -->
+        <section id="skills" class="py-24 bg-slate-100/50 dark:bg-slate-950/40 border-t border-slate-200 dark:border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-widest text-sm">Capabilities</span>
+                    <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-slate-100 mt-2">Technical Toolset & Languages</h2>
+                    <div class="h-1.5 w-24 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full mx-auto mt-4"></div>
+                    <p class="text-slate-600 dark:text-slate-400 mt-4 font-light">
+                        Engineering standards stems from choosing the right tech stack. Here are my technical competencies:
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Programming Languages -->
+                    <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-6 rounded-2xl flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="flex items-center space-x-3 mb-6">
+                                <div class="p-2.5 bg-emerald-500/10 rounded-xl text-emerald-600 dark:text-emerald-400">
+                                    <i class="fa-solid fa-code text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-slate-200">Languages</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">Java</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">Python</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">JavaScript</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">HTML5</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">CSS3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-slate-100 dark:border-slate-800/60 mt-6 pt-4 text-xs text-slate-500">
+                            Core backend logic & browser views
+                        </div>
+                    </div>
+
+                    <!-- Database Management Systems -->
+                    <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-6 rounded-2xl flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="flex items-center space-x-3 mb-6">
+                                <div class="p-2.5 bg-emerald-500/10 rounded-xl text-emerald-600 dark:text-emerald-400">
+                                    <i class="fa-solid fa-database text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-slate-200">Databases</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">MySQL</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">Relational DB Design</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">RDBMS Principles</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-slate-100 dark:border-slate-800/60 mt-6 pt-4 text-xs text-slate-500">
+                            Relational schemas & secure queries
+                        </div>
+                    </div>
+
+                    <!-- Web Technologies -->
+                    <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-6 rounded-2xl flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="flex items-center space-x-3 mb-6">
+                                <div class="p-2.5 bg-emerald-500/10 rounded-xl text-emerald-600 dark:text-emerald-400">
+                                    <i class="fa-solid fa-globe text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-slate-200">Web & UI</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">Responsive Web Design</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">Tailwind CSS</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-slate-100 dark:border-slate-800/60 mt-6 pt-4 text-xs text-slate-500">
+                            Interactive visual layouts & fluid UI grids
+                        </div>
+                    </div>
+
+                    <!-- Tools & IDEs -->
+                    <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-6 rounded-2xl flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="flex items-center space-x-3 mb-6">
+                                <div class="p-2.5 bg-emerald-500/10 rounded-xl text-emerald-600 dark:text-emerald-400">
+                                    <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-slate-200">Tools & IDEs</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">Git / GitHub</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">VS Code</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">NetBeans</span>
+                                    <span class="px-3 py-1.5 bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-600">Eclipse</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-slate-100 dark:border-slate-800/60 mt-6 pt-4 text-xs text-slate-500">
+                            Version management & IDE systems
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Projects -->
+        <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/60">
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-widest text-sm">Portfolio Achievements</span>
+                    <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-slate-100 mt-2">Academic & Personal Projects</h2>
+                    <div class="h-1.5 w-24 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full mx-auto mt-4"></div>
+                    <p class="text-slate-600 dark:text-slate-400 mt-4 font-light">
+                        Academic and self-driven developments highlighting logic execution, responsive styles, and custom database routines.
+                    </p>
+                </div>
+
+                <!-- Interactive Filter Controls -->
+                <div class="flex flex-wrap justify-center items-center gap-3 mb-12">
+                    <button onclick="filterProjects('all')" class="proj-filter-btn px-5 py-2.5 rounded-full text-sm font-semibold border bg-emerald-500 border-emerald-500 text-slate-950 transition-all-custom">
+                        All Projects
+                    </button>
+                    <button onclick="filterProjects('java')" class="proj-filter-btn px-5 py-2.5 rounded-full text-sm font-semibold border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/30 transition-all-custom">
+                        Java / Backend
+                    </button>
+                    <button onclick="filterProjects('database')" class="proj-filter-btn px-5 py-2.5 rounded-full text-sm font-semibold border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/30 transition-all-custom">
+                        Database / SQL
+                    </button>
+                    <button onclick="filterProjects('web')" class="proj-filter-btn px-5 py-2.5 rounded-full text-sm font-semibold border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/30 transition-all-custom">
+                        Web Frontend
+                    </button>
+                </div>
+
+                <!-- Projects Responsive Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project 1: Inventory System -->
+                    <div class="project-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl flex flex-col justify-between overflow-hidden hover:border-emerald-500/40 dark:hover:border-emerald-500/40 hover:-translate-y-1 transition-all-custom group shadow-sm" data-category="java database">
+                        <div>
+                            <!-- Graphic Header -->
+                            <div class="relative h-48 bg-gradient-to-tr from-emerald-50 to-slate-100 dark:from-emerald-950 dark:to-slate-900 flex items-center justify-center border-b border-slate-200 dark:border-slate-800/60 overflow-hidden">
+                                <svg class="w-16 h-16 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                                </svg>
+                                <span class="absolute top-4 right-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full">Java & MySQL</span>
+                            </div>
+                            
+                            <!-- Card Content -->
+                            <div class="p-6">
+                                <span class="text-xs text-slate-500 uppercase tracking-widest font-semibold block mb-2">Academic Individual Project</span>
+                                <h3 class="font-bold text-xl text-slate-900 dark:text-slate-200 mb-3 group-hover:text-emerald-500 transition-colors">Smart Inventory Management System</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                    A robust desktop application developed to automate structural inventory checks, track logging data, and organize supplier directories safely.
+                                </p>
+                                <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400 mb-6">
+                                    <li class="flex items-start">
+                                        <i class="fa-solid fa-check text-emerald-500 mr-2 mt-0.5"></i>
+                                        <span>Designed primary/foreign key mappings to enforce secure CRUD processes.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa-solid fa-check text-emerald-500 mr-2 mt-0.5"></i>
+                                        <span>Created custom alert warnings based on real-time stock levels.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Actions -->
+                        <div class="p-6 pt-0 border-t border-slate-100 dark:border-slate-800/40 flex items-center justify-between">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">Java</span>
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">Swing</span>
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">RDBMS</span>
+                            </div>
+                            <a href="#" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 text-sm font-semibold inline-flex items-center">
+                                Code <i class="fa-brands fa-github ml-1.5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Hotel Management System -->
+                    <div class="project-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl flex flex-col justify-between overflow-hidden hover:border-emerald-500/40 dark:hover:border-emerald-500/40 hover:-translate-y-1 transition-all-custom group shadow-sm" data-category="java database">
+                        <div>
+                            <!-- Graphic Header -->
+                            <div class="relative h-48 bg-gradient-to-tr from-emerald-50 to-slate-100 dark:from-emerald-950 dark:to-slate-900 flex items-center justify-center border-b border-slate-200 dark:border-slate-800/60 overflow-hidden">
+                                <svg class="w-16 h-16 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                                </svg>
+                                <span class="absolute top-4 right-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full">Java & MySQL</span>
+                            </div>
+                            
+                            <!-- Card Content -->
+                            <div class="p-6">
+                                <span class="text-xs text-slate-500 uppercase tracking-widest font-semibold block mb-2">Academic Individual Project</span>
+                                <h3 class="font-bold text-xl text-slate-900 dark:text-slate-200 mb-3 group-hover:text-emerald-500 transition-colors">Hotel Management System</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                    A structured desktop system designed to streamline hotel administrative tasks, room bookings, and customer billing.
+                                </p>
+                                <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400 mb-6">
+                                    <li class="flex items-start">
+                                        <i class="fa-solid fa-check text-emerald-500 mr-2 mt-0.5"></i>
+                                        <span>Developed transactional databases to track room availability status.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa-solid fa-check text-emerald-500 mr-2 mt-0.5"></i>
+                                        <span>Built an interactive customer receipt generation module.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Actions -->
+                        <div class="p-6 pt-0 border-t border-slate-100 dark:border-slate-800/40 flex items-center justify-between">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">Java</span>
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">Swing GUI</span>
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">MySQL</span>
+                            </div>
+                            <a href="#" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 text-sm font-semibold inline-flex items-center">
+                                Code <i class="fa-brands fa-github ml-1.5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Chatting Application -->
+                    <div class="project-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl flex flex-col justify-between overflow-hidden hover:border-emerald-500/40 dark:hover:border-emerald-500/40 hover:-translate-y-1 transition-all-custom group shadow-sm" data-category="java">
+                        <div>
+                            <!-- Graphic Header -->
+                            <div class="relative h-48 bg-gradient-to-tr from-cyan-50 to-slate-100 dark:from-cyan-950 dark:to-slate-900 flex items-center justify-center border-b border-slate-200 dark:border-slate-800/60 overflow-hidden">
+                                <svg class="w-16 h-16 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.625.625 0 11-1.25 0 .625.625 0 011.25 0zm0 0H8.63m3.375 0a.625.625 0 11-1.25 0 .625.625 0 011.25 0zm0 0h.01m3.375 0a.625.625 0 11-1.25 0 .625.625 0 011.25 0zm0 0h.01m-13.08 3.142A12.01 12.01 0 012.25 12c0-2.83 1.245-5.37 3.224-7.114m8.053-1.639c.65-.101 1.31-.157 1.983-.157 5.937 0 10.75 4.21 10.75 9.402 0 5.192-4.813 9.403-10.75 9.403-1.441 0-2.812-.246-4.085-.694L5.25 21.75V17c-1.355-1.197-2.182-2.804-2.182-4.57 0-1.18.374-2.287 1.018-3.21" />
+                                </svg>
+                                <span class="absolute top-4 right-4 bg-cyan-500/10 border border-cyan-500/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold px-2.5 py-1 rounded-full">Java Sockets</span>
+                            </div>
+                            
+                            <!-- Card Content -->
+                            <div class="p-6">
+                                <span class="text-xs text-slate-500 uppercase tracking-widest font-semibold block mb-2">Individual Academic Project</span>
+                                <h3 class="font-bold text-xl text-slate-900 dark:text-slate-200 mb-3 group-hover:text-cyan-500 transition-colors">Real-Time Chatting Application</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                    An instant messaging desktop-based application facilitating simultaneous multi-user messaging.
+                                </p>
+                                <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400 mb-6">
+                                    <li class="flex items-start">
+                                        <i class="fa-solid fa-check text-cyan-500 mr-2 mt-0.5"></i>
+                                        <span>Engineered a client-server architecture handling multiple clients.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa-solid fa-check text-cyan-500 mr-2 mt-0.5"></i>
+                                        <span>Utilized multi-threading to process incoming client flows concurrently.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Actions -->
+                        <div class="p-6 pt-0 border-t border-slate-100 dark:border-slate-800/40 flex items-center justify-between">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">Sockets</span>
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">Threads</span>
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">GUI</span>
+                            </div>
+                            <a href="#" class="text-cyan-600 dark:text-cyan-400 hover:text-cyan-500 text-sm font-semibold inline-flex items-center">
+                                Code <i class="fa-brands fa-github ml-1.5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Guest House Website -->
+                    <div class="project-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl flex flex-col justify-between overflow-hidden hover:border-emerald-500/40 dark:hover:border-emerald-500/40 hover:-translate-y-1 transition-all-custom group shadow-sm" data-category="web">
+                        <div>
+                            <!-- Graphic Header -->
+                            <div class="relative h-48 bg-gradient-to-tr from-emerald-50 to-slate-100 dark:from-emerald-950 dark:to-slate-900 flex items-center justify-center border-b border-slate-200 dark:border-slate-800/60 overflow-hidden">
+                                <svg class="w-16 h-16 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                <span class="absolute top-4 right-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full">Responsive UI</span>
+                            </div>
+                            
+                            <!-- Card Content -->
+                            <div class="p-6">
+                                <span class="text-xs text-slate-500 uppercase tracking-widest font-semibold block mb-2">Individual Creative Project</span>
+                                <h3 class="font-bold text-xl text-slate-900 dark:text-slate-200 mb-3 group-hover:text-emerald-500 transition-colors">Guest House Website</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                    A responsive multi-page promotional web design built for local tourist accommodation showing custom room gallery layouts.
+                                </p>
+                                <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400 mb-6">
+                                    <li class="flex items-start">
+                                        <i class="fa-solid fa-check text-emerald-500 mr-2 mt-0.5"></i>
+                                        <span>Features room galleries, amenitity grids, and query sheets.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa-solid fa-check text-emerald-500 mr-2 mt-0.5"></i>
+                                        <span>Highly responsive structure matching modern desktop and mobile UI views.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Actions -->
+                        <div class="p-6 pt-0 border-t border-slate-100 dark:border-slate-800/40 flex items-center justify-between">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">HTML5</span>
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">CSS3</span>
+                                <span class="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">UI Design</span>
+                            </div>
+                            <a href="#" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 text-sm font-semibold inline-flex items-center">
+                                Demo <i class="fa-solid fa-arrow-up-right-from-square ml-1.5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Timeline Section -->
+        <section id="education" class="py-24 bg-slate-100/50 dark:bg-slate-950/40 border-t border-slate-200 dark:border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left educational summary -->
+                    <div class="lg:col-span-5 flex flex-col space-y-4">
+                        <span class="text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-widest text-sm">Milestones</span>
+                        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-slate-100">Education Track & Certifications</h2>
+                        <div class="h-1.5 w-24 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full mt-2"></div>
+                        <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed pt-4 font-light">
+                            Structured systems logic stems from theoretical consistency, network analysis foundations, database engineering principles, and certified open learning platforms.
+                        </p>
+                        
+                        <!-- Mathematical Background Highlight -->
+                        <div class="mt-6 p-6 bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl flex items-start space-x-4 shadow-sm">
+                            <div class="p-3 bg-cyan-500/10 rounded-xl text-cyan-600 dark:text-cyan-400">
+                                <i class="fa-solid fa-square-root-variable text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-slate-200">Mathematical Background</h4>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm mt-1 leading-relaxed">
+                                    Participated in the island-level Olympiad Mathematics Competition in 2018, building analytical modeling skills.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right academic timeline grid -->
+                    <div class="lg:col-span-7 relative border-l border-slate-300 dark:border-slate-800 pl-8 space-y-12">
+                        
+                        <!-- Timeline Item 1: HND in IT -->
+                        <div class="relative">
+                            <!-- Bullet Indicator -->
+                            <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-white dark:bg-dark-950 border-2 border-emerald-500 flex items-center justify-center">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            </div>
+                            
+                            <span class="text-xs text-emerald-600 dark:text-emerald-400 font-bold tracking-wider uppercase bg-emerald-500/10 px-2.5 py-1 rounded-md">Present Academic Study</span>
+                            <h3 class="font-bold text-xl text-slate-900 dark:text-slate-200 mt-2">Higher National Diploma in Information Technology (HND in IT)</h3>
+                            <span class="text-sm font-semibold text-slate-500 dark:text-slate-400 block mt-1">SLIATE - Dehiwala</span>
+                            
+                            <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-5 rounded-2xl mt-4 shadow-sm">
+                                <h4 class="text-xs uppercase tracking-wider text-slate-500 font-bold mb-2">Key Modules Handled:</h4>
+                                <div class="flex flex-wrap gap-2 text-xs">
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-550">Object-Oriented Programming (Java)</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-550">Database Management Systems (MySQL)</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-550">Web Application Development</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-550">System Analysis & Design</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-850 text-slate-700 dark:text-slate-550">Computer Networks</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2: Python Essentials (Cisco Network Academy) -->
+                        <div class="relative">
+                            <!-- Bullet Indicator -->
+                            <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-white dark:bg-dark-950 border-2 border-emerald-500 flex items-center justify-center">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            </div>
+                            
+                            <span class="text-xs text-cyan-600 dark:text-cyan-400 font-bold tracking-wider uppercase bg-cyan-500/10 px-2.5 py-1 rounded-md">Credential / Certified</span>
+                            <h3 class="font-bold text-xl text-slate-900 dark:text-slate-200 mt-2">Python Essentials Course</h3>
+                            <span class="text-sm font-semibold text-slate-500 dark:text-slate-400 block mt-1">Cisco Networking Academy</span>
+                            
+                            <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-5 rounded-2xl mt-4 shadow-sm">
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Comprehensive training in structural programming methodologies, syntax concepts, data formatting arrays, exception routines, and object-oriented designs utilizing **Python**.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 3: Web Design for Beginners (University of Moratuwa) -->
+                        <div class="relative">
+                            <!-- Bullet Indicator -->
+                            <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-white dark:bg-dark-950 border-2 border-emerald-500 flex items-center justify-center">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            </div>
+                            
+                            <span class="text-xs text-emerald-600 dark:text-emerald-400 font-bold tracking-wider uppercase bg-emerald-500/10 px-2.5 py-1 rounded-md">Credential / Certified</span>
+                            <h3 class="font-bold text-xl text-slate-900 dark:text-slate-200 mt-2">Web Design for Beginners</h3>
+                            <span class="text-sm font-semibold text-slate-500 dark:text-slate-400 block mt-1">University of Moratuwa</span>
+                            
+                            <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-5 rounded-2xl mt-4 shadow-sm">
+                                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Rigorous study of modern web design foundations covering standards-compliant HTML structures, structural CSS, page responsive layouts, and user accessibility frameworks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 4: GCE A/L -->
+                        <div class="relative">
+                            <!-- Bullet Indicator -->
+                            <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-white dark:bg-dark-950 border-2 border-slate-400 dark:border-slate-700 flex items-center justify-center">
+                                <span class="w-2 h-2 rounded-full bg-slate-400 dark:bg-slate-700"></span>
+                            </div>
+                            
+                            <span class="text-xs text-slate-500 dark:text-slate-400 font-bold tracking-wider uppercase bg-slate-200 dark:bg-slate-800 px-2.5 py-1 rounded-md">Graduated in 2022(23)</span>
+                            <h3 class="font-bold text-xl text-slate-900 dark:text-slate-200 mt-2">G.C.E. Advanced Level (A/L)</h3>
+                            <span class="text-sm font-semibold text-slate-500 dark:text-slate-400 block mt-1">Mo/Sevanagala National School - Sevanagala</span>
+                            
+                            <div class="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-5 rounded-2xl mt-4 shadow-sm">
+                                <div class="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-300">
+                                    <i class="fa-solid fa-atom text-cyan-500"></i>
+                                    <span>Stream of Study: <strong class="text-slate-800 dark:text-slate-100 font-semibold">Physical Science (Mathematics, Physics, Information Technology)</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive Contact Section -->
+        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/60">
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+                    
+                    <!-- Left column instructions -->
+                    <div class="lg:col-span-5 flex flex-col space-y-6">
+                        <div class="flex flex-col space-y-2">
+                            <span class="text-emerald-650 dark:text-emerald-400 font-bold uppercase tracking-widest text-sm">Let's Connect</span>
+                            <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-slate-100">Contact Details</h2>
+                            <div class="h-1.5 w-24 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full mt-2"></div>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                            I am open to discuss Internship placements, junior developer opportunities, backend systems troubleshooting, or database setups!
+                        </p>
+                        
+                        <div class="space-y-4 pt-4">
+                            <!-- Detail 1 -->
+                            <div class="flex items-center space-x-4">
+                                <div class="w-11 h-11 bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 dark:text-slate-500 uppercase font-bold">Location</span>
+                                    <p class="text-sm font-semibold text-slate-800 dark:text-slate-300">Embilipitiya, Sri Lanka</p>
+                                </div>
+                            </div>
+
+                            <!-- Detail 2 -->
+                            <div class="flex items-center space-x-4">
+                                <div class="w-11 h-11 bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 dark:text-slate-500 uppercase font-bold">Phone Number</span>
+                                    <p class="text-sm font-semibold text-slate-800 dark:text-slate-300">+94 70 230 8238</p>
+                                </div>
+                            </div>
+
+                            <!-- Detail 3 -->
+                            <div class="flex items-center space-x-4">
+                                <div class="w-11 h-11 bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 dark:text-slate-500 uppercase font-bold">Email Channel</span>
+                                    <p class="text-sm font-semibold text-slate-800 dark:text-slate-300">geethanjaleedeepthika50@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column Contact Form -->
+                    <div class="lg:col-span-7 bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 p-8 rounded-3xl relative shadow-md">
+                        <!-- Simulated Message Box State instead of alert() -->
+                        <div id="contactStatusBox" class="hidden mb-6 p-4 rounded-xl text-sm font-semibold border"></div>
+
+                        <form id="portfolioContactForm" onsubmit="handleContactSubmit(event)" class="space-y-5">
+                            <div>
+                                <label for="contactName" class="block text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold mb-2">Your Name</label>
+                                <input type="text" id="contactName" name="name" required class="w-full bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800/80 focus:border-emerald-500 dark:focus:border-emerald-500 rounded-xl px-4 py-3.5 text-slate-900 dark:text-slate-100 text-sm focus:outline-none transition-all-custom" placeholder="e.g. John Doe">
+                            </div>
+                            <div>
+                                <label for="contactEmail" class="block text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold mb-2">Your Email</label>
+                                <input type="email" id="contactEmail" name="email" required class="w-full bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800/80 focus:border-emerald-500 dark:focus:border-emerald-500 rounded-xl px-4 py-3.5 text-slate-900 dark:text-slate-100 text-sm focus:outline-none transition-all-custom" placeholder="e.g. john@example.com">
+                            </div>
+                            <div>
+                                <label for="contactMessage" class="block text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold mb-2">Message</label>
+                                <textarea id="contactMessage" name="message" rows="4" required class="w-full bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800/80 focus:border-emerald-500 dark:focus:border-emerald-500 rounded-xl px-4 py-3.5 text-slate-900 dark:text-slate-100 text-sm focus:outline-none transition-all-custom" placeholder="Write details here..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-2xl font-bold tracking-wide bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 hover:opacity-90 transition-all-custom shadow-lg shadow-emerald-500/10">
+                                Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-auto border-t border-slate-200 dark:border-slate-850/50 py-12 bg-white dark:bg-slate-950 text-slate-500 text-sm">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col gap-8">
+                
+                <!-- Expanded Footer Details -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left border-b border-slate-100 dark:border-slate-900 pb-8">
+                    <!-- Bio Info -->
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-7 h-7" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M45 25C30 25 25 35 25 50C25 65 30 75 45 75C55 75 60 70 60 60H45" stroke="url(#logoGradFooter)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M55 25H65C78 25 80 38 80 50C80 62 78 75 65 75H55V25Z" stroke="url(#logoGradFooter)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="logoGradFooter" x1="20" y1="20" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#10b981" />
+                                        <stop offset="1" stop-color="#06b6d4" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <span class="font-display font-bold tracking-wider text-slate-800 dark:text-slate-300">GEETHANJALEE DEEPTHIKA</span>
+                        </div>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Information Technology student actively pursuing an HND in IT. Focuses on OOP backend engineering, structural relational database configurations, and clean interactive client designs.
+                        </p>
+                    </div>
+
+                    <!-- Direct Contact Channels -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold uppercase tracking-wider text-xs text-slate-800 dark:text-slate-300">Contact Details</h4>
+                        <ul class="space-y-2 text-xs text-slate-650 dark:text-slate-450">
+                            <li><i class="fa-solid fa-envelope text-emerald-500 mr-2"></i> geethanjaleedeepthika50@gmail.com</li>
+                            <li><i class="fa-solid fa-phone text-emerald-500 mr-2"></i> +94 70 230 8238</li>
+                            <li><i class="fa-solid fa-location-dot text-emerald-500 mr-2"></i> Embilipitiya, Sri Lanka</li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links & Portfolio Note -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold uppercase tracking-wider text-xs text-slate-800 dark:text-slate-300">Endorsements</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed italic">
+                            Academic references, certification proofs, project validation details, and formal SLIATE-Dehiwala records can be supplied instantly upon business request.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Copyright & Social footer line -->
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-4 text-xs">
+                    <p class="text-slate-500 dark:text-slate-500">&copy; 2026 Geethanjalee Deepthika. All rights reserved.</p>
+                    <div class="flex items-center gap-6 text-slate-600 dark:text-slate-400">
+                        <a href="https://www.linkedin.com/in/geethanjalee-deepthika-b581082a9" target="_blank" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="https://github.com/geethanjaleedeepthika50-eng" target="_blank" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                        <a href="mailto:geethanjaleedeepthika50@gmail.com" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"><i class="fa-solid fa-envelope text-lg"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript Interactions Logic -->
+    <script>
+        // Toggle mobile navigation visibility
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuBtnIcon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = 'fa-solid fa-xmark text-xl';
+            } else {
+                menu.classList.add('hidden');
+                icon.className = 'fa-solid fa-bars text-xl';
+            }
+        }
+
+        // Toggle standard Tailwind dark mode
+        function toggleTheme() {
+            const htmlElement = document.documentElement;
+            const themeIcon = document.getElementById('themeIcon');
+            const themeIconMobile = document.getElementById('themeIconMobile');
+            
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-moon text-lg text-slate-600';
+                themeIconMobile.className = 'fa-solid fa-moon text-slate-600';
+                localStorage.setItem('portfolioTheme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-sun text-lg text-amber-500';
+                themeIconMobile.className = 'fa-solid fa-sun text-amber-500';
+                localStorage.setItem('portfolioTheme', 'dark');
+            }
+        }
+
+        // Project category filter algorithm
+        function filterProjects(category) {
+            // Reset active styles on filter buttons
+            const buttons = document.querySelectorAll('.proj-filter-btn');
+            buttons.forEach(btn => {
+                btn.className = 'proj-filter-btn px-5 py-2.5 rounded-full text-sm font-semibold border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/30 transition-all-custom';
+            });
+
+            // Set active highlight on clicked filter button
+            const currentEvent = window.event;
+            if (currentEvent) {
+                const clickedBtn = currentEvent.currentTarget;
+                if (clickedBtn) {
+                    clickedBtn.className = 'proj-filter-btn px-5 py-2.5 rounded-full text-sm font-semibold border bg-emerald-500 border-emerald-500 text-slate-950 transition-all-custom';
+                }
+            }
+
+            // Filter projects display state
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    const cardCategories = card.getAttribute('data-category').split(' ');
+                    if (cardCategories.includes(category)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        // Handle contact form submit & send directly to email via Formspree
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = document.getElementById('contactName').value;
+            const statusBox = document.getElementById('contactStatusBox');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            // Show sending state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `Sending... <i class="fa-solid fa-spinner animate-spin ml-2"></i>`;
+
+            // !! IMPORTANT: Replace 'YOUR_FORMSPREE_FORM_ID' with your Formspree Form ID
+            const formspreeEndpoint = "https://formspree.io/f/xjgqbzwj";
+
+            fetch(formspreeEndpoint, {
+                method: "POST",
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    statusBox.className = 'mb-6 p-4 rounded-xl text-sm font-semibold border bg-emerald-500/10 border-emerald-500/35 text-emerald-600 dark:text-emerald-400 block';
+                    statusBox.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> Thank you, ${name}! Your message has been sent directly to my email.`;
+                    form.reset();
+                } else {
+                    throw new Error("Submission failed");
+                }
+            })
+            .catch(error => {
+                statusBox.className = 'mb-6 p-4 rounded-xl text-sm font-semibold border bg-red-500/10 border-red-500/35 text-red-600 dark:text-red-400 block';
+                statusBox.innerHTML = `<i class="fa-solid fa-circle-xmark mr-2"></i> Oops! Something went wrong. Please email me directly at geethanjaleedeepthika50@gmail.com.`;
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `Send Message <i class="fa-solid fa-paper-plane ml-2"></i>`;
+                setTimeout(() => {
+                    statusBox.className = 'hidden';
+                }, 8000);
+            });
+        }
+
+        // Apply theme preference settings upon startup
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('portfolioTheme');
+            const htmlElement = document.documentElement;
+            const themeIcon = document.getElementById('themeIcon');
+            const themeIconMobile = document.getElementById('themeIconMobile');
+            
+            if (savedTheme === 'light') {
+                htmlElement.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-moon text-lg text-slate-600';
+                themeIconMobile.className = 'fa-solid fa-moon text-slate-600';
+            } else {
+                htmlElement.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-sun text-lg text-amber-500';
+                themeIconMobile.className = 'fa-solid fa-sun text-amber-500';
+            }
+        });
+    </script>
+</body>
+</html>
